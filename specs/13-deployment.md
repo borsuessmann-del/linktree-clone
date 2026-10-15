@@ -1,6 +1,6 @@
 # 13 — Deployment (GitHub + Vercel)
 
-**Status:** 🚧 live und getestet (2026-10-15) – nur Supabase Site-URL noch zu bestätigen
+**Status:** ✅ fertig und verifiziert (2026-10-15)
 
 ## Ziel
 Die App läuft öffentlich auf Vercel (Hobby), der Code liegt in einem GitHub-Repo; ab hier wird nach jedem Arbeitspaket committet (Kurs-Sub 5.13.7).
@@ -17,7 +17,7 @@ Die App läuft öffentlich auf Vercel (Hobby), der Code liegt in einem GitHub-Re
 - [x] Sinnvolle Commit-Historie seit dem Initial-Commit (Features gebündelt)
 - [x] GitHub-Repo angelegt und gepusht
 - [x] Vercel-Projekt verbunden, Env-Variablen `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` gesetzt
-- [ ] Supabase Auth → URL Configuration: Site-URL = Vercel-URL (im Dashboard durch User; Bestätigung ausstehend)
+- [x] Supabase Auth → URL Configuration: Site-URL = Vercel-URL (im Dashboard durch User gesetzt und bestätigt)
 - [x] `npm run build` lokal grün; Vercel-Build grün
 - [x] Live-Test: Sign-Up, Link anlegen, `/u/<username>` auf der Live-URL, 404-Seite
 
@@ -43,4 +43,4 @@ Die App läuft öffentlich auf Vercel (Hobby), der Code liegt in einem GitHub-Re
 - Vercel: erster Build scheiterte ohne Env-Variablen (`env.ts` bricht absichtlich ab); danach Variablen gesetzt + Redeploy. „Vercel Authentication“ (Deployment Protection) musste aus, sonst Redirect auf `vercel.com/sso-api`. `linktree-clone.vercel.app` war vergeben → Domain `linktree-clone-ebon.vercel.app`.
 - Live-Smoke-Test (curl + browser-use): `/` 200 · `/login`, `/signup` 200 · `/dashboard` ausgeloggt → 307 `/login` · Sign-up → Dashboard · Link anlegen (Liste + Preview) · `/u/livesmoke` zeigt Link · `/u/gibtsnicht` → 404-Ansicht · Logout (Tastatur) → `/login`, Dashboard danach gesperrt. Test-User gelöscht.
 - Advisors: performance leer; security nur „Leaked Password Protection Disabled“ → nur im Pro-Plan verfügbar, steht im Backlog (bewusst akzeptiert).
-- Offen: Supabase Auth → URL Configuration (Site-URL + Redirect-URL) im Dashboard setzen und bestätigen.
+- Supabase Auth → URL Configuration: Site-URL `https://linktree-clone-ebon.vercel.app` + Redirect-URL `…/**` vom User gesetzt (nicht per API prüfbar, Bestätigung durch User).

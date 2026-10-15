@@ -21,7 +21,7 @@ Grundlagen: `references/discovery.md` · `references/sparring.md` · `references
 | 10 | Public-Page `/u/<username>` + 404 | [specs/10-public-page.md](specs/10-public-page.md) | 02, 03, 09 | ✅ |
 | 11 | Live-Preview im Dashboard (Phone-Frame) | [specs/11-live-preview.md](specs/11-live-preview.md) | 06, 07, 08, 10 | ✅ |
 | 12 | Landing-Page `/` mit Claim-Feld | [specs/12-landing-page.md](specs/12-landing-page.md) | 04, 10 | ✅ |
-| 13 | Deployment (GitHub + Vercel) | [specs/13-deployment.md](specs/13-deployment.md) | 01–12 | 🚧 |
+| 13 | Deployment (GitHub + Vercel) | [specs/13-deployment.md](specs/13-deployment.md) | 01–12 | ✅ |
 
 **Parallelisierbar:** 01 ∥ 02 · danach 06 ∥ 07 ∥ 09 (alle nur von 05 abhängig).
 
