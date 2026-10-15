@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "migrate-radix-to-base": {
+      "source": "../Users/User1/AppData/Local/Temp/claude/C--linktree/2e8db1a7-282e-439f-81cd-dc62170f2a57/scratchpad/dl/ui/ui-HEAD",
+      "sourceType": "local",
+      "computedHash": "e1f2030ee5059be3dff0812ca0e4b995ee9fa3132176f049ebe6c90346a6755e"
+    },
+    "shadcn": {
+      "source": "../Users/User1/AppData/Local/Temp/claude/C--linktree/2e8db1a7-282e-439f-81cd-dc62170f2a57/scratchpad/dl/ui/ui-HEAD",
+      "sourceType": "local",
+      "computedHash": "b864a958765563321f485a96f4d59c0bb6539f4286ab6d8b8b66895b7ebd302d"
+    },
+    "supabase": {
+      "source": "../Users/User1/AppData/Local/Temp/claude/C--linktree/2e8db1a7-282e-439f-81cd-dc62170f2a57/scratchpad/dl/agent-skills/agent-skills-HEAD",
+      "sourceType": "local",
+      "computedHash": "211141fd078b4b3645803868528d54221bc7755d24d5c8af45a366785c151dba"
+    },
+    "supabase-postgres-best-practices": {
+      "source": "../Users/User1/AppData/Local/Temp/claude/C--linktree/2e8db1a7-282e-439f-81cd-dc62170f2a57/scratchpad/dl/agent-skills/agent-skills-HEAD",
+      "sourceType": "local",
+      "computedHash": "e14e276241805c97dbcfe40dcbea1a3035269cc7293cac4b1832dda41a835e60"
+    }
+  }
+}

@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# persönliche Claude-Code-Einstellungen (Skills unter .claude/skills/ bleiben im Repo)
+.claude/settings.local.json
