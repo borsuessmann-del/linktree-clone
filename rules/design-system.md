@@ -16,9 +16,9 @@ Nicht: Default-Bootstrap, Default-shadcn-Demo, generische Link-Listen.
 
 ## Theming-Architektur (zweistufig)
 1. **Globale Tokens** — mit tweakcn.com visuell gebaut, als CSS-Variablen in `src/app/globals.css` exportiert. Single Source of Truth; keine Farbwerte direkt in Komponenten.
-2. **Per-User-Accent** — nur `--accent` wird auf der Public-Page dynamisch gesetzt (Layout-Wrapper), alles andere bleibt statisch.
+2. **Per-User-Accent** — nur `--brand` (+ berechnetes `--brand-foreground`) wird dynamisch gesetzt, über die Komponente `<UserTheme>` (`src/components/user-theme.tsx`) am Wrapper von Public-Page und Live-Preview; die Klasse `.user-theme` leitet daraus `--primary`, `--primary-foreground` und `--ring` ab. Alles andere bleibt statisch. Nicht `--accent` verwenden – das ist in shadcn die dezente Hover-Fläche (siehe `guidelines.md` 002).
 
 ## Accent-Color-Sicherheit
-- Nur 6-stelliger Hex: `/^#[0-9a-f]{6}$/i` — Validierung im Formular UND in der Server Action.
-- Rendern ausschließlich als CSS-Variable `--accent: #rrggbb` über das React-`style`-Objekt.
-- Nie raw CSS, Style-Strings oder Ausdrücke vom User übernehmen (Schutz vor CSS-Injection/XSS).
+- Nur 6-stelliger Hex: `/^#[0-9a-f]{6}$/i` — Validierung im Formular, in der Server Action UND per DB-CHECK.
+- Rendern ausschließlich über `<UserTheme>` als CSS-Variable `--brand: #rrggbb` im React-`style`-Objekt; ungültige Werte fallen per `safeAccent()` auf den Default zurück.
+- Nie raw CSS, Style-Strings, `<style>` oder `dangerouslySetInnerHTML` mit User-Werten (Schutz vor CSS-Injection/XSS).
