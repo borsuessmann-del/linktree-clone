@@ -12,6 +12,13 @@ Nach jedem Arbeitspaket ein kurzer Debrief: Was lief gut, was nicht, was nehmen 
 
 ## Einträge
 
+## 2026-10-15 — Spec 13: Deployment
+- **Lief gut:** Deploy-Status ohne Vercel-Zugang prüfbar: öffentliche GitHub-API (`/deployments`, `/commits/main/status`) + `curl` auf die Vercel-URL. Achtung: anonym nur 60 Anfragen/Stunde.
+- **Problem:** Erster Vercel-Build rot → Env-Variablen fehlten; `env.ts` bricht absichtlich mit klarer Meldung ab – genau dafür gebaut. Nach Setzen immer **Redeploy** nötig.
+- **Problem:** Live-URL leitete auf `vercel.com/sso-api` um → „Vercel Authentication“ (Deployment Protection) für öffentliche Seiten deaktivieren.
+- **Merken:** Radix-Menüs öffnen nicht auf simuliertes `click()` (reagieren auf Pointer-Down) – im Test per Tastatur bedienen.
+- **Merken:** Einsteiger-Schritte in Dashboards (Vercel, Supabase, GitHub) mit exakten Klickpfaden und kopierfertigen Werten beschreiben.
+
 ## 2026-10-15 — Spec 12: Landing-Page
 - **Lief gut:** Bausteine aus früheren Specs (Zod-Schema aus 04, `PublicProfile` aus 10, `PhoneFrame` aus 11) machten die Landing zur reinen Komposition.
 - **Merken:** `next/form` mit `action="/pfad"` = Such-/Claim-Formular mit Client-Navigation und Fallback ohne JS; `event.preventDefault()` in `onSubmit` stoppt die Navigation bei ungültiger Eingabe.

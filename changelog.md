@@ -11,6 +11,12 @@ Chronologisches Protokoll abgeschlossener Arbeitspakete — neueste Einträge ob
 
 ## Einträge
 
+## 2026-10-15 — Spec 13: Deployment
+- Git-Identität, Branch `main`, 7 gebündelte Commits; Repo https://github.com/borsuessmann-del/linktree-clone
+- Vercel-Deploy live unter https://linktree-clone-ebon.vercel.app (Env-Variablen gesetzt, Deployment Protection aus)
+- Migrationen als `supabase/migrations/*.sql` im Repo; `.claude/settings.local.json` ignoriert
+- Live-Smoke-Test bestanden; Advisors bis auf Pro-Plan-Feature (Leaked Password Protection) sauber
+
 ## 2026-10-15 — Spec 12: Landing-Page
 - Landing `/` mit schwebendem Header (Login/Registrieren bzw. „Zum Dashboard“), Hero „Deine Links. Eine Seite.“, Claim-Feld `/u/[name] Loslegen →` → `/signup?username=…`
 - Demo-Profil im Handy-Rahmen mit wechselnder Akzentfarbe, Feature-Kacheln, minimaler Footer, Glow-Hintergrund
